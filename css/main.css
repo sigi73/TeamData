@@ -455,3 +455,16 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+table.sortable tbody {
+  counter-reset: sortabletablescope; }
+
+table.sortable thead tr::before {
+  content: "";
+  display: table-cell; }
+
+table.sortable tbody tr::before {
+  font-weight: bold;
+  content: counter(sortabletablescope);
+  counter-increment: sortabletablescope;
+  display: table-cell; }
